@@ -11,10 +11,7 @@ export default function Navbar() {
       <nav className="bg-secondary shadow-lg rounded-full mx-auto max-w-7xl">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-accent">
-              <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 2.18l6 3v8.64c0 .64-.59 1.2-1.16 1.38L12 19.5l-4.84-1.3C6.59 18 6 17.44 6 16.82V7.18l6-3z"/>
-              </svg>
+            <Link href="/" className="text-2xl text-accent">
               <span className="hidden sm:inline">Vancouver City Blessing</span>
               <span className="sm:hidden">VCB</span>
             </Link>
