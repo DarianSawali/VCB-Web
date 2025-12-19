@@ -27,8 +27,8 @@ export default function Connect() {
 
       <div className="container mx-auto px-4 py-16 space-y-16">
         {/* Connect Intro */}
-        <section className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl text-secondary mb-4">You Belong Here</h2>
+        <section className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl text-secondary mb-8">You Belong Here</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
             At Vancouver City Blessing, we believe church is more than a Sunday service
             - it is a family. There are many ways to get connected, build relationships,
@@ -37,9 +37,9 @@ export default function Connect() {
         </section>
 
         {/* Carecell Section */}
-        <section className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <h3 className="text-2xl text-secondary mb-4">Carecell</h3>
+        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <h3 className="text-2xl text-secondary mb-8">Carecell</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Carecells are our small groups that meet throughout the week in homes and
               online. They are places to share life, study the Word, pray together, and
@@ -62,15 +62,15 @@ export default function Connect() {
         </section>
 
         {/* Join a Ministry Section */}
-        <section className="max-w-5xl mx-auto">
-          <h3 className="text-2xl text-secondary mb-6">Join a Ministry</h3>
-          <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl">
+        <section className="max-w-6xl mx-auto">
+          <h3 className="text-2xl text-secondary mb-8">Join a Ministry</h3>
+          <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
             We believe every believer has God-given gifts to serve others. Joining a
             ministry team is a great way to grow, build friendships, and make a
             difference.
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white rounded-lg shadow-sm p-6">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
               <h4 className="text-lg text-secondary mb-2">Worship &amp; Media</h4>
               <p className="text-gray-700 text-sm mb-4">
                 Serve with music, sound, production, and creative media.
@@ -79,7 +79,7 @@ export default function Connect() {
                 I'm interested
               </button>
             </div>
-            <div className="bg-white rounded-lg shadow-sm p-6">
+            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
               <h4 className="text-lg text-secondary mb-2">Next Gen &amp; Kids</h4>
               <p className="text-gray-700 text-sm mb-4">
                 Invest in children, youth, and young adults.
@@ -88,7 +88,7 @@ export default function Connect() {
                 I'm interested
               </button>
             </div>
-            <div className="bg-white rounded-lg shadow-sm p-6">
+            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
               <h4 className="text-lg text-secondary mb-2">Hospitality &amp; Care</h4>
               <p className="text-gray-700 text-sm mb-4">
                 Welcome people, serve meals, and care for practical needs.
@@ -101,9 +101,9 @@ export default function Connect() {
         </section>
 
         {/* Prayer Section */}
-        <section className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
-          <div>
-            <h3 className="text-2xl text-secondary mb-4">Prayer</h3>
+        <section className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
+          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <h3 className="text-2xl text-secondary mb-8">Prayer</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Every Wednesday night we gather for Prayer Night - a time of worship,
               intercession, and seeking God together for our church, our city, and the
@@ -119,7 +119,7 @@ export default function Connect() {
           </div>
 
           {/* Prayer Form */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
+          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
             <h4 className="text-lg text-secondary mb-4">Prayer Request</h4>
             <form className="space-y-4">
               <div>
@@ -164,8 +164,8 @@ export default function Connect() {
         </section>
 
         {/* Social Media Section */}
-        <section className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl text-secondary mb-4">Social Media</h3>
+        <section className="max-w-6xl mx-auto text-center">
+          <h3 className="text-2xl text-secondary mb-8">Social Media</h3>
           <p className="text-gray-700 leading-relaxed mb-6">
             Stay connected throughout the week by following us on social media.
           </p>
@@ -193,11 +193,11 @@ export default function Connect() {
 
         {/* Gallery Section */}
         <section className="max-w-6xl mx-auto">
-          <h3 className="text-2xl text-secondary mb-6">Gallery</h3>
-          <p className="text-gray-700 leading-relaxed mb-6 max-w-3xl">
+          <h3 className="text-2xl text-secondary mb-8">Gallery</h3>
+          <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
             A glimpse of what God is doing in and through Vancouver City Blessing.
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
             <div className="h-40 rounded-lg overflow-hidden bg-gray-200">
               <div
                 className="w-full h-full bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600')] bg-cover bg-center"
