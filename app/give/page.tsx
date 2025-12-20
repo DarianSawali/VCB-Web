@@ -15,7 +15,7 @@ export default function Give() {
             Your generosity helps us serve our community and spread the love of Christ.
           </p>
 
-          <div className="space-y-8 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Interac E-Transfer */}
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
               <h2 className="text-2xl text-secondary mb-8">Interac E-Transfer</h2>
@@ -50,16 +50,16 @@ export default function Give() {
                 Please include your name and address in the memo field for tax receipt purposes.
               </p>
             </div>
+          </div>
 
-            {/* Additional Info */}
-            <div className="bg-secondary/10 rounded-lg p-8 md:p-12 text-center">
-              <p className="text-gray-700 mb-2">
-                <span className="font-semibold text-secondary">Tax Receipts:</span> All donations are eligible for tax receipts.
-              </p>
-              <p className="text-gray-700">
-                Receipts will be issued at the end of the tax year.
-              </p>
-            </div>
+          {/* Additional Info */}
+          <div className="bg-secondary/10 rounded-lg p-8 md:p-12 text-center max-w-6xl mx-auto mt-8">
+            <p className="text-gray-700 mb-2">
+              <span className="font-semibold text-secondary">Tax Receipts:</span> All donations are eligible for tax receipts.
+            </p>
+            <p className="text-gray-700">
+              Receipts will be issued at the end of the tax year.
+            </p>
           </div>
         </div>
       </div>

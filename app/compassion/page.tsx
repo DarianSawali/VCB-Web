@@ -7,7 +7,7 @@ export default function Compassion() {
   return (
     <div className="bg-background min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[360px] w-full overflow-hidden">
+      <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden -mt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-secondary/60" />
         <div
           className="absolute inset-0 bg-cover bg-center opacity-60"
