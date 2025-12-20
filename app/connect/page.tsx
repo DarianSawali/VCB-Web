@@ -76,7 +76,7 @@ export default function Connect() {
                 Serve with music, sound, production, and creative media.
               </p>
               <button className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors">
-                I'm interested
+                I&apos;m interested
               </button>
             </div>
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
@@ -85,7 +85,7 @@ export default function Connect() {
                 Invest in children, youth, and young adults.
               </p>
               <button className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors">
-                I'm interested
+                I&apos;m interested
               </button>
             </div>
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
@@ -94,7 +94,7 @@ export default function Connect() {
                 Welcome people, serve meals, and care for practical needs.
               </p>
               <button className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors">
-                I'm interested
+                I&apos;m interested
               </button>
             </div>
           </div>

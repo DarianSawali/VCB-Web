@@ -38,7 +38,7 @@ export default function Give() {
             <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
               <h2 className="text-2xl text-secondary mb-8">Online Cheque</h2>
               <p className="text-gray-700 mb-6">
-                Make a donation using your bank's online cheque or bill payment service.
+                Make a donation using your bank&apos;s online cheque or bill payment service.
               </p>
               <div className="bg-background rounded-lg p-6 mb-6">
                 <p className="text-sm text-gray-600 mb-2">Payee Name:</p>

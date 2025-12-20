@@ -64,6 +64,7 @@ export default function JoinLivestream() {
                   onClick={() => openVideo(video.videoId)}
                 >
                   <div className="h-48 relative group">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={getThumbnailUrl(video.videoId)}
                       alt={video.title}

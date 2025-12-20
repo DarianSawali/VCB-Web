@@ -75,7 +75,7 @@ export default function Compassion() {
                 </h3>
                 <p className="text-gray-500 mb-4 text-sm leading-relaxed">
                   More details about this ministry will be available soon. 
-                  We're excited to share how you can get involved.
+                  We&apos;re excited to share how you can get involved.
                 </p>
                 <button className="bg-gray-300 text-gray-500 px-6 py-2 rounded-full text-sm font-medium cursor-not-allowed w-full" disabled>
                   Coming Soon
@@ -94,7 +94,7 @@ export default function Compassion() {
                 </h3>
                 <p className="text-gray-500 mb-4 text-sm leading-relaxed">
                   More details about this ministry will be available soon. 
-                  We're excited to share how you can get involved.
+                  We&apos;re excited to share how you can get involved.
                 </p>
                 <button className="bg-gray-300 text-gray-500 px-6 py-2 rounded-full text-sm font-medium cursor-not-allowed w-full" disabled>
                   Coming Soon

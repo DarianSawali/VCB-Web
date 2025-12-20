@@ -96,15 +96,15 @@ export default function About() {
                   Vision
                 </h2>
                 <p className="text-xl md:text-2xl font-semibold text-secondary mb-6 text-center italic">
-                  "Building a Church Rooted in the Word, Growing in the Spirit, and Bearing Fruit that will last."
+                  &ldquo;Building a Church Rooted in the Word, Growing in the Spirit, and Bearing Fruit that will last.&rdquo;
                 </p>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p className="italic">
-                    "Let your roots grow down into him, and let your lives be built on him. Then your faith will grow strong in the truth you were taught, and you will overflow with thankfulness."
+                    &ldquo;Let your roots grow down into him, and let your lives be built on him. Then your faith will grow strong in the truth you were taught, and you will overflow with thankfulness.&rdquo;
                   </p>
                   <p className="text-sm text-gray-600">(Colossians 2:7)</p>
                   <p className="italic">
-                    "But blessed are those who trust in the Lord and have made the Lord their hope and confidence. They are like trees planted along a riverbank, with roots that reach deep into the water. Such trees are not bothered by the heat or worried by long months of drought. Their leaves stay green, and they never stop producing fruit."
+                    &ldquo;But blessed are those who trust in the Lord and have made the Lord their hope and confidence. They are like trees planted along a riverbank, with roots that reach deep into the water. Such trees are not bothered by the heat or worried by long months of drought. Their leaves stay green, and they never stop producing fruit.&rdquo;
                   </p>
                   <p className="text-sm text-gray-600">(Jeremiah 17:7-8)</p>
                 </div>
@@ -116,11 +116,11 @@ export default function About() {
                   Mission
                 </h2>
                 <p className="text-xl md:text-2xl font-semibold text-secondary mb-6 text-center italic">
-                  "By the anointing of the Holy Spirit, we are commissioned to transform our communities through Sharing the Gospel, Equipping the Believers, and Planting Churches."
+                  &ldquo;By the anointing of the Holy Spirit, we are commissioned to transform our communities through Sharing the Gospel, Equipping the Believers, and Planting Churches.&rdquo;
                 </p>
                 <div className="space-y-4 text-gray-700 leading-relaxed">
                   <p className="italic">
-                    "The Spirit of the Lord is upon Me, because He has anointed Me to preach the gospel to the poor; He has sent Me to heal the brokenhearted, to proclaim liberty to the captives and recovery of sight to the blind, to set at liberty those who are oppressed; to proclaim the acceptable year of the Lord."
+                    &ldquo;The Spirit of the Lord is upon Me, because He has anointed Me to preach the gospel to the poor; He has sent Me to heal the brokenhearted, to proclaim liberty to the captives and recovery of sight to the blind, to set at liberty those who are oppressed; to proclaim the acceptable year of the Lord.&rdquo;
                   </p>
                   <p className="text-sm text-gray-600">(Luke 4:18-19)</p>
                 </div>
