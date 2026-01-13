@@ -1,3 +1,5 @@
+import GalleryImages from '@/components/Gallery'
+
 export const metadata = {
   title: 'Connect - Vancouver City Blessing',
   description: 'Connect with Vancouver City Blessing church family',
@@ -192,44 +194,17 @@ export default function Connect() {
         </section>
 
         {/* Gallery Section */}
-        <section className="max-w-6xl mx-auto">
+        <section className="max-w-6xl mx-auto mb-4">
           <h3 className="text-2xl text-secondary mb-8">Gallery</h3>
-          <p className="text-gray-700 leading-relaxed mb-8 max-w-3xl">
+          <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
             A glimpse of what God is doing in and through Vancouver City Blessing.
           </p>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-            <div className="h-40 rounded-lg overflow-hidden bg-gray-200">
-              <div
-                className="w-full h-full bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600')] bg-cover bg-center"
-              />
-            </div>
-            <div className="h-40 rounded-lg overflow-hidden bg-gray-200">
-              <div
-                className="w-full h-full bg-[url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600')] bg-cover bg-center"
-              />
-            </div>
-            <div className="h-40 rounded-lg overflow-hidden bg-gray-200">
-              <div
-                className="w-full h-full bg-[url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600')] bg-cover bg-center"
-              />
-            </div>
-            <div className="h-40 rounded-lg overflow-hidden bg-gray-200">
-              <div
-                className="w-full h-full bg-[url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600')] bg-cover bg-center"
-              />
-            </div>
-            <div className="h-40 rounded-lg overflow-hidden bg-gray-200">
-              <div
-                className="w-full h-full bg-[url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=600')] bg-cover bg-center"
-              />
-            </div>
-            <div className="h-40 rounded-lg overflow-hidden bg-gray-200">
-              <div
-                className="w-full h-full bg-[url('https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=600')] bg-cover bg-center"
-              />
-            </div>
-          </div>
         </section>
+      </div>
+
+      {/* Full Width Gallery - Breaks out of container */}
+      <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden -mt-12">
+        <GalleryImages />
       </div>
     </div>
   )

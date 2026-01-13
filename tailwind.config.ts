@@ -26,6 +26,20 @@ const config: Config = {
           900: '#232a20',
         },
       },
+      animation: {
+        'scroll-right': 'scroll-right 50s linear infinite',
+        'scroll-left': 'scroll-left 50s linear infinite',
+      },
+      keyframes: {
+        'scroll-right': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-33.333%)' },
+        },
+        'scroll-left': {
+          '0%': { transform: 'translateX(-33.333%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+      },
     },
   },
   plugins: [],
