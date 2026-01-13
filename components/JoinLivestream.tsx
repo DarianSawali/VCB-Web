@@ -1,37 +1,57 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 interface Video {
+  videoId: string
   title: string
-  date: string
-  videoId: string // YouTube video ID
+  publishedAt: string
+  thumbnailUrl: string
+  description: string
+}
+
+interface YouTubeResponse {
+  liveStream: Video | null
+  recentVideos: Video[]
 }
 
 export default function JoinLivestream() {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null)
+  const [liveStream, setLiveStream] = useState<Video | null>(null)
+  const [recentVideos, setRecentVideos] = useState<Video[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
-  // Replace these with your actual YouTube video IDs
-  const videos: Video[] = [
-    {
-      title: 'SO CLOSE, YET SO FAR: THE LESSON OF MOSES',
-      date: 'October 25, 2005',
-      videoId: 'dQw4w9WgXcQ', // Replace with your YouTube video ID
-    },
-    {
-      title: 'HEAVEN on Earth',
-      date: 'October 18, 2005',
-      videoId: 'dQw4w9WgXcQ', // Replace with your YouTube video ID
-    },
-    {
-      title: 'The Goodness of GOD',
-      date: 'October 11, 2005',
-      videoId: 'dQw4w9WgXcQ', // Replace with your YouTube video ID
-    },
-  ]
+  useEffect(() => {
+    const fetchVideos = async () => {
+      try {
+        setLoading(true)
+        const response = await fetch('/api/youtube')
+        if (!response.ok) {
+          throw new Error('Failed to fetch videos')
+        }
+        const data: YouTubeResponse = await response.json()
+        setLiveStream(data.liveStream)
+        setRecentVideos(data.recentVideos)
+        setError(null)
+      } catch (err) {
+        console.error('Error fetching videos:', err)
+        setError('Unable to load videos. Please try again later.')
+      } finally {
+        setLoading(false)
+      }
+    }
 
-  const getThumbnailUrl = (videoId: string) => {
-    return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`
+    fetchVideos()
+  }, [])
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString)
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
   }
 
   const openVideo = (videoId: string) => {
@@ -41,6 +61,51 @@ export default function JoinLivestream() {
   const closeVideo = () => {
     setSelectedVideo(null)
   }
+
+  const renderVideoCard = (video: Video, isLive: boolean = false) => (
+    <div
+      key={video.videoId}
+      className={`bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden cursor-pointer hover:bg-white/15 transition-colors ${
+        isLive ? 'md:col-span-3' : ''
+      }`}
+      onClick={() => openVideo(video.videoId)}
+    >
+      <div className={`relative group ${isLive ? 'h-64 md:h-96' : 'h-48'}`}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={video.thumbnailUrl}
+          alt={video.title}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.src = `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`
+          }}
+        />
+        {/* Live Badge */}
+        {isLive && (
+          <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold flex items-center gap-2 animate-pulse">
+            <span className="w-2 h-2 bg-white rounded-full"></span>
+            LIVE
+          </div>
+        )}
+        {/* Play Button Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+            <svg
+              className="w-8 h-8 text-secondary ml-1"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div className="p-6">
+        <h3 className="font-bold text-lg mb-2">{video.title}</h3>
+        <p className="text-white/80 text-sm">{formatDate(video.publishedAt)}</p>
+      </div>
+    </div>
+  )
 
   return (
     <>
@@ -52,48 +117,31 @@ export default function JoinLivestream() {
                 Join the Live Stream
               </h2>
               <p className="text-white/80 max-w-2xl">
-                Watch our past services and sermons. Click on any video to play.
+                {liveStream
+                  ? 'Join us live now! Watch our service as it happens.'
+                  : 'Watch our past services and sermons. Click on any video to play.'}
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
-              {videos.map((video, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden cursor-pointer hover:bg-white/15 transition-colors"
-                  onClick={() => openVideo(video.videoId)}
-                >
-                  <div className="h-48 relative group">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={getThumbnailUrl(video.videoId)}
-                      alt={video.title}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        // Fallback to a lower quality thumbnail if maxresdefault fails
-                        e.currentTarget.src = `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`
-                      }}
-                    />
-                    {/* Play Button Overlay */}
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <svg
-                          className="w-8 h-8 text-secondary ml-1"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M8 5v14l11-7z" />
-                        </svg>
-                      </div>
-                    </div>
+            {loading ? (
+              <div className="text-center py-12">
+                <p className="text-white/80">Loading videos...</p>
+              </div>
+            ) : error ? (
+              <div className="text-center py-12">
+                <p className="text-white/80">{error}</p>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-3 gap-6">
+                {liveStream && renderVideoCard(liveStream, true)}
+                {recentVideos.map((video) => renderVideoCard(video, false))}
+                {!liveStream && recentVideos.length === 0 && (
+                  <div className="col-span-3 text-center py-12">
+                    <p className="text-white/80">No videos available at this time.</p>
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-lg mb-2">{video.title}</h3>
-                    <p className="text-white/80 text-sm">{video.date}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </section>
