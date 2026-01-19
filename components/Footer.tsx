@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Footer() {
   return (
     <footer className="bg-secondary text-white mt-auto">
@@ -9,8 +7,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4 text-accent">Vancouver City Blessing</h3>
             <div className="space-y-2 text-sm text-white/80">
-              <p>1920 Willington Ave, Burnaby, BC V5C 0K4</p>
-              <p>+1 (234) 123-2348</p>
+              <p>320 8th St, New Westminster, BC V3M 3R4</p>
             </div>
           </div>
 
@@ -18,16 +15,9 @@ export default function Footer() {
           <div className="md:col-span-2 md:text-right">
             <div className="flex justify-start md:justify-end gap-4 mb-6">
               <a 
-                href="#" 
-                className="w-10 h-10 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors"
-                aria-label="Facebook"
-              >
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </a>
-              <a 
-                href="#" 
+                href="https://www.instagram.com/cityblessingvancouver/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors"
                 aria-label="Instagram"
               >
@@ -36,7 +26,9 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="#" 
+                href="https://www.youtube.com/@vancouvercityblessing7174" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors"
                 aria-label="YouTube"
               >
@@ -49,15 +41,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <p className="text-sm text-white/80">
               &copy; {new Date().getFullYear()} Vancouver City Blessing. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm text-white/80">
-              <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>
-              <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
-              <Link href="#" className="hover:text-white transition-colors">Terms and Conditions</Link>
-            </div>
           </div>
         </div>
       </div>

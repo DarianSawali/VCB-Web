@@ -5,20 +5,20 @@ export default function Ministries() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-stretch">
             {/* Left Side - Event Card */}
-            <div className="bg-background p-6 rounded-lg border border-secondary/20">
+            <div className="bg-background p-6 rounded-lg border border-secondary/20 flex flex-col">
               <h3 className="text-2xl font-bold text-secondary mb-4">
                 NIGHTSHIFT MINISTRY X VCB
               </h3>
-              <div className="space-y-3 mb-6">
-                <p className="text-secondary font-semibold">SAT. NOV 6, 2005</p>
+              <div className="space-y-3 mb-6 flex-grow">
+                <p className="text-secondary font-semibold">Every Other Month on the Second Saturday</p>
                 <p className="text-gray-700">4:00 PM - FOOD PREP</p>
                 <p className="text-gray-600 text-sm">
                   Contact us for more information about this event.
                 </p>
               </div>
-              <div className="h-48 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg mb-4 relative overflow-hidden">
+              <div className="h-48 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg relative overflow-hidden">
                 <div 
                   className="absolute inset-0 bg-cover bg-center opacity-70"
                   style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600)' }}
@@ -29,25 +29,35 @@ export default function Ministries() {
             {/* Right Side - Text Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                Ministries
+                Attend our Service
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed mb-6">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco laboris.
+                  You're invited to join us for worship every Saturday at 10:45am. We gather to worship God, hear His Word, and grow together in faith in a welcoming and supportive community.
                 </p>
-                <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-background/50 p-4 rounded-lg border border-secondary/10">
+                    <h3 className="font-semibold text-secondary mb-3">Location:</h3>
+                    <p className="mb-1">320 8th St, New Westminster, BC V3M 3R4</p>
+                    <p className="text-sm text-gray-600 italic">(Freedom Church building)</p>
+                  </div>
+
+                  <div className="bg-background/50 p-4 rounded-lg border border-secondary/10">
+                    <h3 className="font-semibold text-secondary mb-2">Service Start:</h3>
+                    <p>Saturdays, 10:45am</p>
+                  </div>
+                </div>
+
+                <p className="text-gray-700 leading-relaxed">
+                  Whether you're visiting for the first time or looking for a church to call home, we'd love to welcome you.
                 </p>
               </div>
               <Link
-                href="/compassion"
+                href="/connect"
                 className="inline-block bg-secondary text-white px-8 py-3 font-semibold hover:bg-secondary/90 transition-colors rounded-full"
               >
-                Learn more
+                Get Connected
               </Link>
             </div>
           </div>

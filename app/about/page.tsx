@@ -133,13 +133,65 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
               Our Story
             </h2>
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 text-center">
-              <p className="text-gray-700 text-lg mb-6">
-                Meet our pastors and learn about the heart behind Vancouver City Blessing.
-              </p>
-              <p className="text-gray-600">
-                Details coming soon...
-              </p>
+            
+            <div className="space-y-12">
+              {/* Ivan & Joanne Jonathan */}
+              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-8 items-stretch">
+                  <div className="order-2 md:order-1 flex flex-col justify-center">
+                    <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-2">
+                      Ivan & Joanne Jonathan
+                    </h3>
+                    <p className="text-lg text-accent font-semibold mb-6">Lead Pastors</p>
+                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                      <p>
+                        Ivan Jonathan was born in Jakarta, Indonesia and was called to be His servant at a young age. In 1996, he moved to Australia and completed his Bachelor's in Ministry. Upon returning to Indonesia in 2002, he joined the City Blessing Church in Jakarta, working with the Wagner Leadership Institute Asia founded by Dr. C. Peter Wagner.
+                      </p>
+                      <p>
+                        Ivan Jonathan is an ordained minister since 2009 and had been serving as the Associate Pastor of City Blessing Church in Vancouver, British Columbia, Canada. As of November 2012, he serves as the Lead Pastor of City Blessing Church – Metro Vancouver.
+                      </p>
+                      <p>
+                        Ivan Jonathan is an active member of Ministers Fellowship International (MFI) since 2011, which was founded by Ps. Dick Iverson, and led by Dr. Frank Damazio.
+                      </p>
+                      <p>
+                        Ivan currently resides in British Columbia, Canada with his wife Joanne and their two kids, Matthew and Tiffany.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="order-1 md:order-2 min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg overflow-hidden">
+                    <div 
+                      className="w-full h-full bg-cover bg-center"
+                      style={{ backgroundImage: 'url(/images/about/pastors/ivan-joanne.webp)' }}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Peter & Nani Tayu */}
+              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+                <div className="grid md:grid-cols-2 gap-8 items-stretch">
+                  <div className="min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg overflow-hidden">
+                    <div 
+                      className="w-full h-full bg-cover bg-center"
+                      style={{ backgroundImage: 'url(/images/about/pastors/peter-nani.webp)' }}
+                    />
+                  </div>
+                  <div className="flex flex-col justify-center">
+                    <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-2">
+                      Peter & Nani Tayu
+                    </h3>
+                    <p className="text-lg text-accent font-semibold mb-6">Founding Pastors</p>
+                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                      <p>
+                        Peter and Nani Tayu moved to Vancouver, Canada in 1998 and were led by God to plant City Blessing Church in Vancouver, and have been raising leaders since its founding in 1999.
+                      </p>
+                      <p>
+                        Ever since passing on leadership of the church to Ivan and Joanne Jonathan in November 2012, Peter and Nani Tayu have been called to serve in Indonesia. They have two daughters and are blessed with two grandchildren.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -148,25 +200,25 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
               Pillars of Ministries
             </h2>
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-                <div className="h-64 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg flex items-center justify-center mb-4">
-                  <p className="text-gray-500 font-semibold">Pillars Image</p>
+            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <div className="flex flex-col gap-8">
+                <div className="w-full rounded-lg overflow-hidden min-h-[500px] md:min-h-[600px] -mb-20">
+                  <div 
+                    className="w-full h-full bg-cover bg-center"
+                    style={{ 
+                      backgroundImage: 'url(/images/about/pillars/ministry-pillars.webp)',
+                      backgroundSize: 'contain',
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'center',
+                      minHeight: '500px'
+                    }}
+                  />
                 </div>
-                <p className="text-gray-600 text-sm text-center">
-                  Image placeholder - will be replaced with the 4 pillars graphic
-                </p>
-              </div>
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  Our ministries are built upon four foundational pillars that guide everything we do:
-                </p>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  These pillars represent the core values and principles that shape our church community and our mission to serve God and our neighbors.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  More details about each pillar will be available soon.
-                </p>
+                <div className="text-center">
+                  <p className="text-gray-700 leading-relaxed text-lg">
+                    The four pillars of ministry are foundational to the operations of our church body. Each is equally important and is integral to the growth and empowerment of our church.
+                  </p>
+                </div>
               </div>
             </div>
           </section>

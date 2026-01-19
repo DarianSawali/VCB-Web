@@ -68,18 +68,18 @@ export default function JoinLivestream() {
       className={`bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden cursor-pointer hover:bg-white/15 transition-colors ${
         isLive ? 'md:col-span-3' : ''
       }`}
-      onClick={() => openVideo(video.videoId)}
-    >
+                  onClick={() => openVideo(video.videoId)}
+                >
       <div className={`relative group ${isLive ? 'h-64 md:h-96' : 'h-48'}`}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
           src={video.thumbnailUrl}
-          alt={video.title}
-          className="w-full h-full object-cover"
-          onError={(e) => {
-            e.currentTarget.src = `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`
-          }}
-        />
+                      alt={video.title}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = `https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`
+                      }}
+                    />
         {/* Live Badge */}
         {isLive && (
           <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold flex items-center gap-2 animate-pulse">
@@ -87,24 +87,24 @@ export default function JoinLivestream() {
             LIVE
           </div>
         )}
-        {/* Play Button Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
-          <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg
-              className="w-8 h-8 text-secondary ml-1"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M8 5v14l11-7z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-      <div className="p-6">
-        <h3 className="font-bold text-lg mb-2">{video.title}</h3>
+                    {/* Play Button Overlay */}
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <svg
+                          className="w-8 h-8 text-secondary ml-1"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="font-bold text-lg mb-2">{video.title}</h3>
         <p className="text-white/80 text-sm">{formatDate(video.publishedAt)}</p>
-      </div>
-    </div>
+                  </div>
+                </div>
   )
 
   return (
