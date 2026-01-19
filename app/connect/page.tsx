@@ -1,12 +1,12 @@
+'use client'
+
+import { useState } from 'react'
 import GalleryImages from '@/components/Gallery'
 import PrayerForm from '@/components/PrayerForm'
-
-export const metadata = {
-  title: 'Connect - Vancouver City Blessing',
-  description: 'Connect with Vancouver City Blessing church family',
-}
+import ContactForm from '@/components/ContactForm'
 
 export default function Connect() {
+  const [showContactForm, setShowContactForm] = useState(false)
   return (
     <div className="bg-background min-h-screen">
       {/* Hero Section */}
@@ -33,31 +33,39 @@ export default function Connect() {
         <section className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl text-secondary mb-8">You Belong Here</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            At Vancouver City Blessing, we believe church is more than a Sunday service
+            At Vancouver City Blessing, we believe church is more than a weekly service
             - it is a family. There are many ways to get connected, build relationships,
             and grow in your walk with Jesus.
           </p>
         </section>
 
         {/* Carecell Section */}
-        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start">
-          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+        <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
+          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 flex flex-col">
             <h3 className="text-2xl text-secondary mb-8">Carecell</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Carecells are our small groups that meet throughout the week in homes and
-              online. They are places to share life, study the Word, pray together, and
-              care for one another.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              Whether you are new to church or have been following Jesus for many years,
-              there is a Carecell for you. We would love to help you find a group that fits
-              your stage of life and location.
-            </p>
-            <button className="mt-2 bg-secondary text-white px-8 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors">
+            <div className="space-y-4 text-gray-700 leading-relaxed mb-6 flex-grow">
+              <p>
+                Carecells are our small groups that meet throughout the week in homes and
+                online. They are places to share life, study the Word, pray together, and
+                care for one another. The value of trust, care and support are based on the love of Christ is what CARE cell is all about (a.k.a Small Group)
+              </p>
+              <p>
+                Whether you are new to church or have been following Jesus for many years,
+                there is a Carecell for you. We would love to help you find a group that fits
+                your stage of life and location.
+              </p>
+              <p>
+                Reach out to one of our leaders or Contact us to learn more about our Carecells.
+              </p>
+            </div>
+            <button 
+              onClick={() => setShowContactForm(true)}
+              className="mt-2 bg-secondary text-white px-8 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors"
+            >
               Find a Carecell
             </button>
           </div>
-          <div className="h-64 md:h-72 rounded-lg overflow-hidden bg-gradient-to-br from-secondary/20 to-accent/20 relative">
+          <div className="min-h-[400px] md:min-h-[500px] rounded-lg overflow-hidden bg-gradient-to-br from-secondary/20 to-accent/20 relative">
             <div
               className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=900')] bg-cover bg-center opacity-80"
             />
@@ -78,7 +86,10 @@ export default function Connect() {
               <p className="text-gray-700 text-sm mb-4">
                 Serve with music, sound, production, and creative media.
               </p>
-              <button className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors">
+              <button 
+                onClick={() => setShowContactForm(true)}
+                className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors"
+              >
                 I&apos;m interested
               </button>
             </div>
@@ -87,7 +98,10 @@ export default function Connect() {
               <p className="text-gray-700 text-sm mb-4">
                 Invest in children, youth, and young adults.
               </p>
-              <button className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors">
+              <button 
+                onClick={() => setShowContactForm(true)}
+                className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors"
+              >
                 I&apos;m interested
               </button>
             </div>
@@ -96,7 +110,10 @@ export default function Connect() {
               <p className="text-gray-700 text-sm mb-4">
                 Welcome people, serve meals, and care for practical needs.
               </p>
-              <button className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors">
+              <button 
+                onClick={() => setShowContactForm(true)}
+                className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors"
+              >
                 I&apos;m interested
               </button>
             </div>
@@ -108,16 +125,13 @@ export default function Connect() {
           <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
             <h3 className="text-2xl text-secondary mb-8">Prayer</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Every Wednesday night we gather for Prayer Night - a time of worship,
-              intercession, and seeking God together for our church, our city, and the
-              nations.
+              Every other wednesday, we gather for Corporate Prayer - a time of worship, intercession, and seeking God together for our church, our city, and the nations.
             </p>
-            <p className="text-gray-700 leading-relaxed mb-2">
+            {/* <p className="text-gray-700 leading-relaxed mb-2">
               <span className="font-semibold">Prayer Night:</span> Wednesdays, 7:00 PM
-            </p>
+            </p> */}
             <p className="text-gray-700 leading-relaxed mb-4">
-              We would be honored to pray with you. Share your prayer request below and
-              our team will stand with you in faith.
+              We would be honored to pray with you. Share your prayer request below and our team will stand with you in faith.
             </p>
           </div>
 
@@ -133,7 +147,9 @@ export default function Connect() {
           </p>
           <div className="flex justify-center gap-6">
             <a
-              href="#"
+              href="https://www.instagram.com/cityblessingvancouver/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 flex items-center justify-center border border-secondary/40 rounded-full text-secondary hover:bg-secondary hover:text-white transition-colors"
               aria-label="Instagram"
             >
@@ -142,7 +158,9 @@ export default function Connect() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.youtube.com/@vancouvercityblessing7174"
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 flex items-center justify-center border border-secondary/40 rounded-full text-secondary hover:bg-secondary hover:text-white transition-colors"
               aria-label="YouTube"
             >
@@ -154,18 +172,33 @@ export default function Connect() {
         </section>
 
         {/* Gallery Section */}
-        <section className="max-w-6xl mx-auto mb-4">
+        {/* <section className="max-w-6xl mx-auto mb-4">
           <h3 className="text-2xl text-secondary mb-8">Gallery</h3>
           <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
             A glimpse of what God is doing in and through Vancouver City Blessing.
           </p>
-        </section>
+        </section> */}
       </div>
 
-      {/* Full Width Gallery - Breaks out of container */}
+      {/* Full Width Gallery - Breaks out of container
       <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden -mt-12">
         <GalleryImages />
-      </div>
+      </div> */}
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={() => setShowContactForm(false)}
+        >
+          <div
+            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ContactForm onClose={() => setShowContactForm(false)} />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

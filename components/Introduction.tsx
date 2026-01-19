@@ -9,23 +9,18 @@ export default function Introduction() {
             {/* Left Side - Text Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                Welcome
+                Vancouver City Blessing
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod 
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim 
-                  veniam, quis nostrud exercitation ullamco laboris.
+                  Vancouver City Blessing Church is a Christ-centred community committed to knowing God, growing in faith, and sharing His love with our city. Whether you are new to church, exploring faith, or looking for a place to belong, you are welcome here.
                 </p>
                 <p>
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum 
-                  dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                  We invite you to join us as we worship together, build meaningful relationships, and live out God’s calling in our daily lives.
                 </p>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
-                  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
-                </p>
+                {/* <p>
+                  
+                </p> */}
               </div>
               <Link
                 href="/connect"
