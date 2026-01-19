@@ -33,7 +33,7 @@ export default function Ministries() {
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed mb-6">
                 <p>
-                  You're invited to join us for worship every Saturday at 10:45am. We gather to worship God, hear His Word, and grow together in faith in a welcoming and supportive community.
+                  You&apos;re invited to join us for worship every Saturday at 10:45am. We gather to worship God, hear His Word, and grow together in faith in a welcoming and supportive community.
                 </p>
                 
                 <div className="grid md:grid-cols-2 gap-4">
@@ -50,7 +50,7 @@ export default function Ministries() {
                 </div>
 
                 <p className="text-gray-700 leading-relaxed">
-                  Whether you're visiting for the first time or looking for a church to call home, we'd love to welcome you.
+                  Whether you&apos;re visiting for the first time or looking for a church to call home, we&apos;d love to welcome you.
                 </p>
               </div>
               <Link

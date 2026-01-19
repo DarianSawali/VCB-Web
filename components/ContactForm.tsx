@@ -134,14 +134,14 @@ export default function ContactForm({ onClose }: ContactFormProps) {
             className="w-full border border-gray-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/60 focus:border-secondary/60"
             required
             disabled={isSubmitting}
-            placeholder="Tell us about yourself and what you're looking for in a Carecell..."
+            placeholder="Tell us about yourself and what you&apos;re looking for in a Carecell..."
           />
         </div>
         
         {/* Success Message */}
         {submitStatus === 'success' && (
           <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-md text-sm">
-            Thank you for reaching out! We'll get back to you soon.
+            Thank you for reaching out! We&apos;ll get back to you soon.
           </div>
         )}
 

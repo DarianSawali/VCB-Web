@@ -80,7 +80,7 @@ export default function Connect() {
               <h3 className="text-2xl text-secondary mb-6">Join us</h3>
               <div className="space-y-4 mb-6">
                 <p className="text-gray-700 leading-relaxed">
-                  We'd love to welcome you to City Blessing Church. Whether you're exploring faith, new to the area, or looking for a church community, you are warmly invited to join us.
+                  We&apos;d love to welcome you to City Blessing Church. Whether you&apos;re exploring faith, new to the area, or looking for a church community, you are warmly invited to join us.
                 </p>
                 <p className="text-gray-700 leading-relaxed">
                   Our gatherings are centred on worship, biblical teaching, and genuine community.
@@ -121,7 +121,7 @@ export default function Connect() {
               <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
                 <h4 className="text-xl text-secondary mb-4">Kids Ministry</h4>
                 <p className="text-gray-700 leading-relaxed">
-                  We're glad to welcome families. A kids ministry is available during the service, providing a safe and caring environment where children can learn about God in age-appropriate and engaging ways. Our volunteers are committed to helping kids grow in faith while parents are able to participate fully in the worship service.
+                  We&apos;re glad to welcome families. A kids ministry is available during the service, providing a safe and caring environment where children can learn about God in age-appropriate and engaging ways. Our volunteers are committed to helping kids grow in faith while parents are able to participate fully in the worship service.
                 </p>
               </div>
 
@@ -129,7 +129,7 @@ export default function Connect() {
               <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
                 <h4 className="text-xl text-secondary mb-4">Fellowship Time</h4>
                 <p className="text-gray-700 leading-relaxed">
-                  Church doesn't end when the service ends. After worship, we invite you to stay for fellowship time, where you can connect with others, enjoy conversation, and build meaningful relationships. It's a relaxed and welcoming time to get to know our church community.
+                  Church doesn&apos;t end when the service ends. After worship, we invite you to stay for fellowship time, where you can connect with others, enjoy conversation, and build meaningful relationships. It&apos;s a relaxed and welcoming time to get to know our church community.
                 </p>
               </div>
             </div>

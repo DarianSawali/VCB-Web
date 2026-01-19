@@ -14,7 +14,7 @@ export default function Give() {
           
           <div className="max-w-3xl mx-auto mb-12">
             <p className="text-lg text-gray-700 leading-relaxed text-center">
-              We believe giving is a privilege and an essential part of God's heart. The Father's heart is all about giving with love, sacrifice, and joy, and it is our privilege to give just as He has unconditionally given to us. We believe that as we give, we not only further the work of the Kingdom, but we invest in lives that will be transformed for His glory.
+              We believe giving is a privilege and an essential part of God&apos;s heart. The Father&apos;s heart is all about giving with love, sacrifice, and joy, and it is our privilege to give just as He has unconditionally given to us. We believe that as we give, we not only further the work of the Kingdom, but we invest in lives that will be transformed for His glory.
             </p>
           </div>
 

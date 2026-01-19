@@ -39,7 +39,7 @@ export default function About() {
     },
     {
       title: 'The Bible',
-      content: "We believe that the Bible is God's Word, a message to all people, inspired and written under the supernatural guidance of the Holy Spirit. The Bible is complete and infallible in nature. It is authoritative in teaching, rebuking and training in all aspects of our daily lives.",
+      content: 'We believe that the Bible is God&apos;s Word, a message to all people, inspired and written under the supernatural guidance of the Holy Spirit. The Bible is complete and infallible in nature. It is authoritative in teaching, rebuking and training in all aspects of our daily lives.',
       verses: '2 Tim. 3:16; 1 Cor. 2:13',
     },
     {
@@ -145,7 +145,7 @@ export default function About() {
                     <p className="text-lg text-accent font-semibold mb-6">Lead Pastors</p>
                     <div className="space-y-4 text-gray-700 leading-relaxed">
                       <p>
-                        Ivan Jonathan was born in Jakarta, Indonesia and was called to be His servant at a young age. In 1996, he moved to Australia and completed his Bachelor's in Ministry. Upon returning to Indonesia in 2002, he joined the City Blessing Church in Jakarta, working with the Wagner Leadership Institute Asia founded by Dr. C. Peter Wagner.
+                        Ivan Jonathan was born in Jakarta, Indonesia and was called to be His servant at a young age. In 1996, he moved to Australia and completed his Bachelor&apos;s in Ministry. Upon returning to Indonesia in 2002, he joined the City Blessing Church in Jakarta, working with the Wagner Leadership Institute Asia founded by Dr. C. Peter Wagner.
                       </p>
                       <p>
                         Ivan Jonathan is an ordained minister since 2009 and had been serving as the Associate Pastor of City Blessing Church in Vancouver, British Columbia, Canada. As of November 2012, he serves as the Lead Pastor of City Blessing Church – Metro Vancouver.
