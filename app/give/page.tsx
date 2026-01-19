@@ -9,57 +9,58 @@ export default function Give() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-secondary">
-            Give
+            WAYS TO GIVE
           </h1>
-          <p className="text-lg text-gray-700 text-center mb-16">
-            Your generosity helps us serve our community and spread the love of Christ.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {/* Interac E-Transfer */}
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-              <h2 className="text-2xl text-secondary mb-8">Interac E-Transfer</h2>
-              <p className="text-gray-700 mb-6">
-                Send your donation via Interac E-Transfer to our church email.
-              </p>
-              <div className="bg-background rounded-lg p-6 mb-6">
-                <p className="text-sm text-gray-600 mb-2">Send to:</p>
-                <p className="text-lg font-semibold text-secondary">give@vancouvercityblessing.org</p>
-                <p className="text-sm text-gray-600 mt-4 mb-2">Security Question:</p>
-                <p className="text-lg font-semibold text-secondary">What is the name of our church?</p>
-                <p className="text-sm text-gray-600 mt-2">Answer: <span className="font-semibold">Vancouver City Blessing</span></p>
-              </div>
-              <p className="text-sm text-gray-600">
-                Please include your name and address in the message for tax receipt purposes.
-              </p>
-            </div>
-
-            {/* Online Cheque */}
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
-              <h2 className="text-2xl text-secondary mb-8">Online Cheque</h2>
-              <p className="text-gray-700 mb-6">
-                Make a donation using your bank&apos;s online cheque or bill payment service.
-              </p>
-              <div className="bg-background rounded-lg p-6 mb-6">
-                <p className="text-sm text-gray-600 mb-2">Payee Name:</p>
-                <p className="text-lg font-semibold text-secondary">Vancouver City Blessing</p>
-                <p className="text-sm text-gray-600 mt-4 mb-2">Account Number:</p>
-                <p className="text-lg font-semibold text-secondary">[Your Account Number]</p>
-              </div>
-              <p className="text-sm text-gray-600">
-                Please include your name and address in the memo field for tax receipt purposes.
-              </p>
-            </div>
+          
+          <div className="max-w-3xl mx-auto mb-12">
+            <p className="text-lg text-gray-700 leading-relaxed text-center">
+              We believe giving is a privilege and an essential part of God's heart. The Father's heart is all about giving with love, sacrifice, and joy, and it is our privilege to give just as He has unconditionally given to us. We believe that as we give, we not only further the work of the Kingdom, but we invest in lives that will be transformed for His glory.
+            </p>
           </div>
 
-          {/* Additional Info */}
-          <div className="bg-secondary/10 rounded-lg p-8 md:p-12 text-center max-w-6xl mx-auto mt-8">
-            <p className="text-gray-700 mb-2">
-              <span className="font-semibold text-secondary">Tax Receipts:</span> All donations are eligible for tax receipts.
-            </p>
-            <p className="text-gray-700">
-              Receipts will be issued at the end of the tax year.
-            </p>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {/* By: Cheque */}
+            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 text-center">
+              <div className="flex justify-center mb-6">
+                <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+              </div>
+              <h2 className="text-2xl text-secondary mb-6">By: Cheque</h2>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm text-gray-600 mb-2">Payable to:</p>
+                  <p className="text-lg font-semibold text-secondary">Vancouver City Blessing</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-600 mb-2">Address:</p>
+                  <p className="text-gray-700 leading-relaxed">
+                    P.O. Box 31094 RPO Thunderbird,<br />
+                    Langley BC, V1M 0A9
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* By: Online */}
+            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 text-center">
+              <div className="flex justify-center mb-6">
+                <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                  </svg>
+                </div>
+              </div>
+              <h2 className="text-2xl text-secondary mb-6">By: Online</h2>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-sm text-gray-600 mb-2">Interac e-transfer:</p>
+                  <p className="text-lg font-semibold text-secondary break-all">vancityblessing@gmail.com</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

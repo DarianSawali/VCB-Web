@@ -18,7 +18,7 @@ export default function Footer() {
                 href="https://www.instagram.com/cityblessingvancouver/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors rounded-full"
                 aria-label="Instagram"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -29,7 +29,7 @@ export default function Footer() {
                 href="https://www.youtube.com/@vancouvercityblessing7174" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-white/30 rounded hover:bg-white/10 transition-colors rounded-full"
                 aria-label="YouTube"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

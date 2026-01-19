@@ -72,6 +72,70 @@ export default function Connect() {
           </div>
         </section>
 
+        {/* Join us Section */}
+        <section id="join-us" className="max-w-6xl mx-auto scroll-mt-20">
+          <div className="space-y-8">
+            {/* Join us and Saturday Worship Service in one box */}
+            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <h3 className="text-2xl text-secondary mb-6">Join us</h3>
+              <div className="space-y-4 mb-6">
+                <p className="text-gray-700 leading-relaxed">
+                  We'd love to welcome you to City Blessing Church. Whether you're exploring faith, new to the area, or looking for a church community, you are warmly invited to join us.
+                </p>
+                <p className="text-gray-700 leading-relaxed">
+                  Our gatherings are centred on worship, biblical teaching, and genuine community.
+                </p>
+              </div>
+
+              <div className="border-t border-gray-200 pt-6">
+                <h4 className="text-xl text-secondary mb-4">Saturday Worship Service</h4>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  We gather each week to worship God, pray together, and hear from His Word.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">🕘</span>
+                    <div>
+                      <p className="text-sm text-gray-600 mb-1">Time:</p>
+                      <p className="text-gray-700 font-medium">Saturdays at 10:45am</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-2xl">📍</span>
+                    <div>
+                      <p className="text-sm text-gray-600 mb-1">Location:</p>
+                      <p className="text-gray-700">
+                        320 8th St<br />
+                        New Westminster, BC V3M 3R4<br />
+                        <span className="text-sm text-gray-600 italic">(Freedom Church building)</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Kids Ministry and Fellowship Time - Side by side on larger screens */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Kids Ministry */}
+              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+                <h4 className="text-xl text-secondary mb-4">Kids Ministry</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  We're glad to welcome families. A kids ministry is available during the service, providing a safe and caring environment where children can learn about God in age-appropriate and engaging ways. Our volunteers are committed to helping kids grow in faith while parents are able to participate fully in the worship service.
+                </p>
+              </div>
+
+              {/* Fellowship Time */}
+              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+                <h4 className="text-xl text-secondary mb-4">Fellowship Time</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  Church doesn't end when the service ends. After worship, we invite you to stay for fellowship time, where you can connect with others, enjoy conversation, and build meaningful relationships. It's a relaxed and welcoming time to get to know our church community.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Join a Ministry Section */}
         <section className="max-w-6xl mx-auto">
           <h3 className="text-2xl text-secondary mb-8">Join a Ministry</h3>

@@ -13,7 +13,7 @@ export default function Ministries() {
               </h3>
               <div className="space-y-3 mb-6 flex-grow">
                 <p className="text-secondary font-semibold">Every Other Month on the Second Saturday</p>
-                <p className="text-gray-700">4:00 PM - FOOD PREP</p>
+                <p className="text-gray-700">4:30 PM - FOOD PREP</p>
                 <p className="text-gray-600 text-sm">
                   Contact us for more information about this event.
                 </p>

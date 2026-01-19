@@ -1,9 +1,10 @@
-export const metadata = {
-  title: 'Compassion Ministries - Vancouver City Blessing',
-  description: 'Compassion Ministries at Vancouver City Blessing',
-}
+'use client'
+
+import { useState } from 'react'
+import ContactForm from '@/components/ContactForm'
 
 export default function Compassion() {
+  const [showContactForm, setShowContactForm] = useState(false)
   return (
     <div className="bg-background min-h-screen">
       {/* Hero Section */}
@@ -55,10 +56,13 @@ export default function Compassion() {
                   We meet regularly to provide food, community, and encouragement.
                 </p>
                 <div className="space-y-2 mb-4">
-                  <p className="text-secondary font-semibold text-sm">SAT. NOV 6, 2005</p>
-                  <p className="text-gray-600 text-sm">4:00 PM - FOOD PREP</p>
+                  <p className="text-secondary font-semibold text-sm">Every Other Month on the Second Saturday</p>
+                  <p className="text-gray-600 text-sm">4:30 PM - FOOD PREP</p>
                 </div>
-                <button className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-secondary/90 transition-colors w-full">
+                <button 
+                  onClick={() => setShowContactForm(true)}
+                  className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-secondary/90 transition-colors w-full"
+                >
                   Learn More
                 </button>
               </div>
@@ -104,6 +108,21 @@ export default function Compassion() {
           </div>
         </section>
       </div>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div
+          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          onClick={() => setShowContactForm(false)}
+        >
+          <div
+            className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <ContactForm onClose={() => setShowContactForm(false)} />
+          </div>
+        </div>
+      )}
     </div>
   )
 }
