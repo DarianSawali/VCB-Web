@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Introduction() {
   return (
@@ -16,7 +17,7 @@ export default function Introduction() {
                   Vancouver City Blessing Church is a Christ-centred community committed to knowing God, growing in faith, and sharing His love with our city. Whether you are new to church, exploring faith, or looking for a place to belong, you are welcome here.
                 </p>
                 <p>
-                  We invite you to join us as we worship together, build meaningful relationships, and live out God’s calling in our daily lives.
+                  We invite you to join us as we worship together, build meaningful relationships, and live out God's calling in our daily lives.
                 </p>
                 {/* <p>
                   
@@ -31,10 +32,16 @@ export default function Introduction() {
             </div>
 
             {/* Right Side - Image */}
-            <div className="relative h-[400px] md:h-[500px]">
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800')] bg-cover bg-center rounded-lg opacity-80"></div>
-              </div>
+            <div className="relative rounded-xl overflow-hidden flex justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20 z-10 opacity-60 rounded-xl"></div>
+              <Image
+                src="/images/hero/welcome.JPG"
+                alt="Welcome to Vancouver City Blessing"
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="w-full h-auto max-h-[400px] md:max-h-[500px] object-contain rounded-xl relative z-0"
+              />
             </div>
           </div>
         </div>

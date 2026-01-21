@@ -20,7 +20,7 @@ export default function Give() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* By: Cheque */}
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 text-center">
+            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12 text-center">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center">
                   <svg className="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -45,7 +45,7 @@ export default function Give() {
             </div>
 
             {/* By: Online */}
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 text-center">
+            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12 text-center">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center">
                   <svg className="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">

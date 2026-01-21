@@ -78,7 +78,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+    <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
       <div className="flex justify-between items-center mb-6">
         <h4 className="text-lg text-secondary">Contact Us</h4>
         {onClose && (

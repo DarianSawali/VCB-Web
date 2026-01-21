@@ -13,10 +13,11 @@ export default function Connect() {
       <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden -mt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-secondary/60" />
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-60"
+          className="absolute inset-0 bg-cover opacity-60"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200')",
+              "url('/images/connect/connect-hero.JPG')",
+            backgroundPosition: 'center 72%',
           }}
         />
         <div className="relative h-full flex items-center justify-center">
@@ -41,7 +42,7 @@ export default function Connect() {
 
         {/* Carecell Section */}
         <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-stretch">
-          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12 flex flex-col">
+          <div className="bg-white rounded-xl shadow-sm p-8 md:p-12 flex flex-col">
             <h3 className="text-2xl text-secondary mb-8">Carecell</h3>
             <div className="space-y-4 text-gray-700 leading-relaxed mb-6 flex-grow">
               <p>
@@ -65,9 +66,9 @@ export default function Connect() {
               Find a Carecell
             </button>
           </div>
-          <div className="min-h-[400px] md:min-h-[500px] rounded-lg overflow-hidden bg-gradient-to-br from-secondary/20 to-accent/20 relative">
+          <div className="min-h-[400px] md:min-h-[500px] rounded-xl overflow-hidden bg-gradient-to-br from-secondary/20 to-accent/20 relative">
             <div
-              className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=900')] bg-cover bg-center opacity-80"
+              className="absolute inset-0 bg-[url('/images/connect/carecell.jpeg')] bg-cover bg-center opacity-80"
             />
           </div>
         </section>
@@ -76,7 +77,7 @@ export default function Connect() {
         <section id="join-us" className="max-w-6xl mx-auto scroll-mt-20">
           <div className="space-y-8">
             {/* Join us and Saturday Worship Service in one box */}
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
               <h3 className="text-2xl text-secondary mb-6">Join us</h3>
               <div className="space-y-4 mb-6">
                 <p className="text-gray-700 leading-relaxed">
@@ -118,7 +119,7 @@ export default function Connect() {
             {/* Kids Ministry and Fellowship Time - Side by side on larger screens */}
             <div className="grid md:grid-cols-2 gap-8">
               {/* Kids Ministry */}
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
                 <h4 className="text-xl text-secondary mb-4">Kids Ministry</h4>
                 <p className="text-gray-700 leading-relaxed">
                   We&apos;re glad to welcome families. A kids ministry is available during the service, providing a safe and caring environment where children can learn about God in age-appropriate and engaging ways. Our volunteers are committed to helping kids grow in faith while parents are able to participate fully in the worship service.
@@ -126,7 +127,7 @@ export default function Connect() {
               </div>
 
               {/* Fellowship Time */}
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
                 <h4 className="text-xl text-secondary mb-4">Fellowship Time</h4>
                 <p className="text-gray-700 leading-relaxed">
                   Church doesn&apos;t end when the service ends. After worship, we invite you to stay for fellowship time, where you can connect with others, enjoy conversation, and build meaningful relationships. It&apos;s a relaxed and welcoming time to get to know our church community.
@@ -145,7 +146,7 @@ export default function Connect() {
             difference.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
               <h4 className="text-lg text-secondary mb-2">Worship &amp; Media</h4>
               <p className="text-gray-700 text-sm mb-4">
                 Serve with music, sound, production, and creative media.
@@ -157,7 +158,7 @@ export default function Connect() {
                 I&apos;m interested
               </button>
             </div>
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
               <h4 className="text-lg text-secondary mb-2">Next Gen &amp; Kids</h4>
               <p className="text-gray-700 text-sm mb-4">
                 Invest in children, youth, and young adults.
@@ -169,7 +170,7 @@ export default function Connect() {
                 I&apos;m interested
               </button>
             </div>
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
               <h4 className="text-lg text-secondary mb-2">Hospitality &amp; Care</h4>
               <p className="text-gray-700 text-sm mb-4">
                 Welcome people, serve meals, and care for practical needs.
@@ -186,7 +187,7 @@ export default function Connect() {
 
         {/* Prayer Section */}
         <section className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-start">
-          <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+          <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
             <h3 className="text-2xl text-secondary mb-8">Prayer</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               Every other wednesday, we gather for Corporate Prayer - a time of worship, intercession, and seeking God together for our church, our city, and the nations.

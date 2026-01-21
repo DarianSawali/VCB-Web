@@ -11,10 +11,11 @@ export default function Compassion() {
       <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden -mt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-secondary/60" />
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-60"
+          className="absolute inset-0 bg-cover opacity-60"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200')",
+              "url('/images/compassion/nightshift.JPG')",
+            backgroundPosition: 'center 40%',
           }}
         />
         <div className="relative h-full flex items-center justify-center">
@@ -40,11 +41,11 @@ export default function Compassion() {
         <section className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             {/* Nightshift Ministry */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-xl shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-secondary/20 to-accent/20 relative">
                 <div
                   className="absolute inset-0 bg-cover bg-center opacity-70"
-                  style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=600)' }}
+                  style={{ backgroundImage: 'url(/images/ministries/cooking.jpeg)' }}
                 />
               </div>
               <div className="p-6">
@@ -69,7 +70,7 @@ export default function Compassion() {
             </div>
 
             {/* Coming Soon Card 1 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden opacity-75">
+            <div className="bg-white rounded-xl shadow-md overflow-hidden opacity-75">
               <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 relative flex items-center justify-center">
                 <p className="text-gray-500 font-semibold">Coming Soon</p>
               </div>
@@ -88,7 +89,7 @@ export default function Compassion() {
             </div>
 
             {/* Coming Soon Card 2 */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden opacity-75">
+            <div className="bg-white rounded-xl shadow-md overflow-hidden opacity-75">
               <div className="h-48 bg-gradient-to-br from-gray-200 to-gray-300 relative flex items-center justify-center">
                 <p className="text-gray-500 font-semibold">Coming Soon</p>
               </div>

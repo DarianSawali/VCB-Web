@@ -30,7 +30,7 @@ function GalleryRow({ images, direction, rowNumber }: { images: string[], direct
         {duplicatedImages.map((image, index) => (
           <div
             key={`row${rowNumber}-${index}`}
-            className="flex-shrink-0 w-64 h-40 rounded-lg overflow-hidden bg-gray-200"
+            className="flex-shrink-0 w-64 h-40 rounded-xl overflow-hidden bg-gray-200"
           >
             <div
               className="w-full h-full bg-cover bg-center"

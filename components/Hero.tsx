@@ -1,13 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 export default function Hero() {
   const images = [
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200',
-    'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1200',
-    'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200',
-    'https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1200',
+    '/images/hero/hero-image.jpg',
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -46,11 +44,14 @@ export default function Hero() {
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-secondary/60"></div>
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-secondary/10 z-10"></div>
+            <Image
+              src={image}
+              alt="Hero image"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         ))}
       </div>

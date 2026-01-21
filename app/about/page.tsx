@@ -91,7 +91,7 @@ export default function About() {
           <section className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {/* Vision */}
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 text-center">
                   Vision
                 </h2>
@@ -111,7 +111,7 @@ export default function About() {
               </div>
 
               {/* Mission */}
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4 text-center">
                   Mission
                 </h2>
@@ -136,7 +136,7 @@ export default function About() {
             
             <div className="space-y-12">
               {/* Ivan & Joanne Jonathan */}
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-stretch">
                   <div className="order-2 md:order-1 flex flex-col justify-center">
                     <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-2">
@@ -158,7 +158,7 @@ export default function About() {
                       </p>
                     </div>
                   </div>
-                  <div className="order-1 md:order-2 min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg overflow-hidden">
+                  <div className="order-1 md:order-2 min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-xl overflow-hidden">
                     <div 
                       className="w-full h-full bg-cover bg-center"
                       style={{ backgroundImage: 'url(/images/about/pastors/ivan-joanne.webp)' }}
@@ -168,9 +168,9 @@ export default function About() {
               </div>
 
               {/* Peter & Nani Tayu */}
-              <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-stretch">
-                  <div className="min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-lg overflow-hidden">
+                  <div className="min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-xl overflow-hidden">
                     <div 
                       className="w-full h-full bg-cover bg-center"
                       style={{ backgroundImage: 'url(/images/about/pastors/peter-nani.webp)' }}
@@ -200,9 +200,9 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
               Pillars of Ministries
             </h2>
-            <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
               <div className="flex flex-col gap-8">
-                <div className="w-full rounded-lg overflow-hidden min-h-[500px] md:min-h-[600px] -mb-20">
+                <div className="w-full rounded-xl overflow-hidden min-h-[500px] md:min-h-[600px] -mb-20">
                   <div 
                     className="w-full h-full bg-cover bg-center"
                     style={{ 
@@ -234,7 +234,7 @@ export default function About() {
               {statements.map((statement, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-sm p-8 md:p-12 border border-gray-200"
+                  className="bg-white rounded-xl shadow-sm p-8 md:p-12 border border-gray-200"
                 >
                   <h3 className="text-xl font-bold text-secondary mb-3">
                     {statement.title}
@@ -254,7 +254,7 @@ export default function About() {
               {statements.map((statement, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
                 >
                   <button
                     onClick={() => toggleStatement(index)}

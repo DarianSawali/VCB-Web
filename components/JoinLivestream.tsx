@@ -65,7 +65,7 @@ export default function JoinLivestream() {
   const renderVideoCard = (video: Video, isLive: boolean = false) => (
     <div
       key={video.videoId}
-      className={`bg-white/10 backdrop-blur-sm rounded-lg overflow-hidden cursor-pointer hover:bg-white/15 transition-colors ${
+      className={`bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden cursor-pointer hover:bg-white/15 transition-colors ${
         isLive ? 'md:col-span-3' : ''
       }`}
                   onClick={() => openVideo(video.videoId)}
@@ -177,7 +177,7 @@ export default function JoinLivestream() {
             </button>
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg"
+                className="absolute top-0 left-0 w-full h-full rounded-xl"
                 src={`https://www.youtube.com/embed/${selectedVideo}?autoplay=1`}
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

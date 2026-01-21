@@ -63,7 +63,7 @@ export default function PrayerForm() {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-8 md:p-12">
+    <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
       <h4 className="text-lg text-secondary mb-4">Prayer Request</h4>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

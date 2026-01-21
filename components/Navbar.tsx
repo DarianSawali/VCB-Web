@@ -83,35 +83,35 @@ export default function Navbar() {
           <nav className="space-y-2">
             <Link
               href="/"
-              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-lg transition-colors"
+              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-xl transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-lg transition-colors"
+              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-xl transition-colors"
               onClick={() => setIsOpen(false)}
             >
               About Us
             </Link>
             <Link
               href="/connect"
-              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-lg transition-colors"
+              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-xl transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Connect
             </Link>
             <Link
               href="/give"
-              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-lg transition-colors"
+              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-xl transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Give
             </Link>
             <Link
               href="/compassion"
-              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-lg transition-colors"
+              className="block py-4 px-6 text-white text-xl hover:text-accent hover:bg-white/10 rounded-xl transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Compassion Ministries
