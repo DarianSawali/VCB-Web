@@ -17,7 +17,7 @@ export default function Introduction() {
                   Vancouver City Blessing Church is a Christ-centred community committed to knowing God, growing in faith, and sharing His love with our city. Whether you are new to church, exploring faith, or looking for a place to belong, you are welcome here.
                 </p>
                 <p>
-                  We invite you to join us as we worship together, build meaningful relationships, and live out God's calling in our daily lives.
+                  We invite you to join us as we worship together, build meaningful relationships, and live out God&apos;s calling in our daily lives.
                 </p>
                 {/* <p>
                   
