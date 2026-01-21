@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 
 interface Video {
   videoId: string
@@ -132,15 +133,25 @@ export default function JoinLivestream() {
                 <p className="text-white/80">{error}</p>
               </div>
             ) : (
-              <div className="grid md:grid-cols-3 gap-6">
-                {liveStream && renderVideoCard(liveStream, true)}
-                {recentVideos.map((video) => renderVideoCard(video, false))}
-                {!liveStream && recentVideos.length === 0 && (
-                  <div className="col-span-3 text-center py-12">
-                    <p className="text-white/80">No videos available at this time.</p>
-                  </div>
-                )}
-              </div>
+              <>
+                <div className="grid md:grid-cols-3 gap-6">
+                  {liveStream && renderVideoCard(liveStream, true)}
+                  {recentVideos.map((video) => renderVideoCard(video, false))}
+                  {!liveStream && recentVideos.length === 0 && (
+                    <div className="col-span-3 text-center py-12">
+                      <p className="text-white/80">No videos available at this time.</p>
+                    </div>
+                  )}
+                </div>
+                <div className="text-center mt-8">
+                  <Link
+                    href="/messages"
+                    className="inline-block bg-background text-secondary px-8 py-3 font-semibold border-2 border-background hover:bg-transparent hover:text-background transition-colors rounded-full"
+                  >
+                    More
+                  </Link>
+                </div>
+              </>
             )}
           </div>
         </div>

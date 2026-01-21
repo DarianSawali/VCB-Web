@@ -62,7 +62,7 @@ export default function Compassion() {
                 </div>
                 <button 
                   onClick={() => setShowContactForm(true)}
-                  className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-secondary/90 transition-colors w-full"
+                  className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-medium border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors w-full"
                 >
                   Learn More
                 </button>

@@ -9,7 +9,7 @@ interface StatementItem {
 }
 
 export default function About() {
-  const [openStatement, setOpenStatement] = useState<number | null>(null)
+  const [openStatements, setOpenStatements] = useState<Set<number>>(new Set())
 
   const statements: StatementItem[] = [
     {
@@ -75,7 +75,15 @@ export default function About() {
   ]
 
   const toggleStatement = (index: number) => {
-    setOpenStatement(openStatement === index ? null : index)
+    setOpenStatements((prev) => {
+      const newSet = new Set(prev)
+      if (newSet.has(index)) {
+        newSet.delete(index)
+      } else {
+        newSet.add(index)
+      }
+      return newSet
+    })
   }
 
   return (
@@ -127,23 +135,27 @@ export default function About() {
               </div>
             </div>
           </section>
+        </div>
+      </div>
 
-          {/* 2. Our Story Section (Meet Our Pastors) */}
-          <section className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
+      {/* 2. Our Story Section (Meet Our Pastors) */}
+      <section className="bg-secondary text-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 text-center">
               Our Story
             </h2>
             
             <div className="space-y-12">
               {/* Ivan & Joanne Jonathan */}
-              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-sm p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-stretch">
                   <div className="order-2 md:order-1 flex flex-col justify-center">
-                    <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                       Ivan & Joanne Jonathan
                     </h3>
                     <p className="text-lg text-accent font-semibold mb-6">Lead Pastors</p>
-                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <div className="space-y-4 text-white/90 leading-relaxed">
                       <p>
                         Ivan Jonathan was born in Jakarta, Indonesia and was called to be His servant at a young age. In 1996, he moved to Australia and completed his Bachelor&apos;s in Ministry. Upon returning to Indonesia in 2002, he joined the City Blessing Church in Jakarta, working with the Wagner Leadership Institute Asia founded by Dr. C. Peter Wagner.
                       </p>
@@ -158,7 +170,7 @@ export default function About() {
                       </p>
                     </div>
                   </div>
-                  <div className="order-1 md:order-2 min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-xl overflow-hidden">
+                  <div className="order-1 md:order-2 min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-white/20 to-white/10 rounded-xl overflow-hidden">
                     <div 
                       className="w-full h-full bg-cover bg-center"
                       style={{ backgroundImage: 'url(/images/about/pastors/ivan-joanne.webp)' }}
@@ -168,20 +180,20 @@ export default function About() {
               </div>
 
               {/* Peter & Nani Tayu */}
-              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-sm p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-stretch">
-                  <div className="min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-secondary/20 to-accent/20 rounded-xl overflow-hidden">
+                  <div className="min-h-[400px] md:min-h-[500px] bg-gradient-to-br from-white/20 to-white/10 rounded-xl overflow-hidden">
                     <div 
                       className="w-full h-full bg-cover bg-center"
                       style={{ backgroundImage: 'url(/images/about/pastors/peter-nani.webp)' }}
                     />
                   </div>
                   <div className="flex flex-col justify-center">
-                    <h3 className="text-2xl md:text-3xl font-bold text-secondary mb-2">
+                    <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
                       Peter & Nani Tayu
                     </h3>
                     <p className="text-lg text-accent font-semibold mb-6">Founding Pastors</p>
-                    <div className="space-y-4 text-gray-700 leading-relaxed">
+                    <div className="space-y-4 text-white/90 leading-relaxed">
                       <p>
                         Peter and Nani Tayu moved to Vancouver, Canada in 1998 and were led by God to plant City Blessing Church in Vancouver, and have been raising leaders since its founding in 1999.
                       </p>
@@ -193,18 +205,22 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-6xl mx-auto space-y-16">
           {/* 3. Pillars of Ministries Section */}
           <section className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-8 text-center">
               Pillars of Ministries
             </h2>
             <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-4">
                 <div className="w-full rounded-xl overflow-hidden min-h-[500px] md:min-h-[600px] -mb-20">
                   <div 
-                    className="w-full h-full bg-cover bg-center"
+                    className="w-full h-full bg-cover bg-center rounded-xl"
                     style={{ 
                       backgroundImage: 'url(/images/about/pillars/ministry-pillars.webp)',
                       backgroundSize: 'contain',
@@ -265,7 +281,7 @@ export default function About() {
                     </span>
                     <svg
                       className={`w-5 h-5 text-secondary flex-shrink-0 transition-transform ${
-                        openStatement === index ? 'transform rotate-180' : ''
+                        openStatements.has(index) ? 'transform rotate-180' : ''
                       }`}
                       fill="none"
                       stroke="currentColor"
@@ -279,7 +295,7 @@ export default function About() {
                       />
                     </svg>
                   </button>
-                  {openStatement === index && (
+                  {openStatements.has(index) && (
                     <div className="px-8 pb-8">
                       <p className="text-gray-700 leading-relaxed mb-4">
                         {statement.content}

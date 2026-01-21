@@ -155,7 +155,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="bg-secondary text-white px-8 py-2 rounded-full text-sm font-medium hover:bg-secondary/90 transition-colors w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-secondary text-white px-8 py-2 rounded-full text-sm font-medium border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors w-full disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? 'Submitting...' : 'Send Message'}
         </button>

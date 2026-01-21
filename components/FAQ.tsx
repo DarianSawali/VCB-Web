@@ -8,29 +8,33 @@ interface FAQItem {
 }
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set())
 
   const faqs: FAQItem[] = [
     {
-      question: 'This is question 1',
-      answer: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      question: 'When and where are your services?',
+      answer: 'We gather for worship every Saturday at 10:45am at 320 8th St, New Westminster, BC V3M 3R4 (Freedom Church building). We would love to welcome you!',
     },
     {
-      question: 'This is question 2',
-      answer: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      question: 'Do you have programs for children?',
+      answer: 'Yes! We have a Kids Ministry available during the service, providing a safe and caring environment where children can learn about God in age-appropriate and engaging ways. Our volunteers are committed to helping kids grow in faith while parents are able to participate fully in the worship service.',
     },
     {
-      question: 'This is question 3',
-      answer: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-    },
-    {
-      question: 'This is question 4',
-      answer: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      question: 'How can I get connected to a Carecell?',
+      answer: 'Carecells are our small groups that meet, they are places to share life, study the Word, pray together, and care for one another. Whether you are new to church or have been following Jesus for many years, there is a Carecell for you. You can contact us through our website, and we would love to help you find a group that fits.',
     },
   ]
 
   const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
+    setOpenIndices((prev) => {
+      const newSet = new Set(prev)
+      if (newSet.has(index)) {
+        newSet.delete(index)
+      } else {
+        newSet.add(index)
+      }
+      return newSet
+    })
   }
 
   return (
@@ -58,7 +62,7 @@ export default function FAQ() {
                   </span>
                   <svg
                     className={`w-5 h-5 text-secondary flex-shrink-0 transition-transform ${
-                      openIndex === index ? 'transform rotate-180' : ''
+                      openIndices.has(index) ? 'transform rotate-180' : ''
                     }`}
                     fill="none"
                     stroke="currentColor"
@@ -72,7 +76,7 @@ export default function FAQ() {
                     />
                   </svg>
                 </button>
-                {openIndex === index && (
+                {openIndices.has(index) && (
                   <div className="mt-4">
                     <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
                   </div>

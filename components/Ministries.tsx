@@ -53,12 +53,12 @@ export default function Ministries() {
                   Whether you&apos;re visiting for the first time or looking for a church to call home, we&apos;d love to welcome you.
                 </p>
               </div>
-              <Link
-                href="/connect"
-                className="inline-block bg-secondary text-white px-8 py-3 font-semibold hover:bg-secondary/90 transition-colors rounded-full"
-              >
-                Get Connected
-              </Link>
+                    <Link
+                      href="/connect"
+                      className="inline-block bg-secondary text-white px-8 py-3 font-semibold border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors rounded-full"
+                    >
+                      Get Connected
+                    </Link>
             </div>
           </div>
         </div>

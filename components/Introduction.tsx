@@ -25,7 +25,7 @@ export default function Introduction() {
               </div>
               <Link
                 href="/connect#join-us"
-                className="inline-block mt-6 bg-secondary text-white px-8 py-3 font-semibold hover:bg-secondary/90 transition-colors rounded-full"
+                className="inline-block mt-6 bg-secondary text-white px-8 py-3 font-semibold border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors rounded-full"
               >
                 How to get there
               </Link>

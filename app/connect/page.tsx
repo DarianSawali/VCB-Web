@@ -61,7 +61,7 @@ export default function Connect() {
             </div>
             <button 
               onClick={() => setShowContactForm(true)}
-              className="mt-2 bg-secondary text-white px-8 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors"
+              className="mt-2 bg-secondary text-white px-8 py-3 rounded-full font-medium border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors"
             >
               Find a Carecell
             </button>
@@ -72,43 +72,45 @@ export default function Connect() {
             />
           </div>
         </section>
+      </div>
 
-        {/* Join us Section */}
-        <section id="join-us" className="max-w-6xl mx-auto scroll-mt-20">
-          <div className="space-y-8">
+      {/* Join us Section */}
+      <section id="join-us" className="bg-secondary text-white py-16 scroll-mt-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto space-y-8">
             {/* Join us and Saturday Worship Service in one box */}
-            <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
-              <h3 className="text-2xl text-secondary mb-6">Join us</h3>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-sm p-8 md:p-12">
+              <h3 className="text-2xl text-white mb-6">Join us</h3>
               <div className="space-y-4 mb-6">
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-white/90 leading-relaxed">
                   We&apos;d love to welcome you to City Blessing Church. Whether you&apos;re exploring faith, new to the area, or looking for a church community, you are warmly invited to join us.
                 </p>
-                <p className="text-gray-700 leading-relaxed">
+                <p className="text-white/90 leading-relaxed">
                   Our gatherings are centred on worship, biblical teaching, and genuine community.
                 </p>
               </div>
 
-              <div className="border-t border-gray-200 pt-6">
-                <h4 className="text-xl text-secondary mb-4">Saturday Worship Service</h4>
-                <p className="text-gray-700 leading-relaxed mb-4">
+              <div className="border-t border-white/20 pt-6">
+                <h4 className="text-xl text-white mb-4">Saturday Worship Service</h4>
+                <p className="text-white/90 leading-relaxed mb-4">
                   We gather each week to worship God, pray together, and hear from His Word.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">🕘</span>
                     <div>
-                      <p className="text-sm text-gray-600 mb-1">Time:</p>
-                      <p className="text-gray-700 font-medium">Saturdays at 10:45am</p>
+                      <p className="text-sm text-white/80 mb-1">Time:</p>
+                      <p className="text-white font-medium">Saturdays at 10:45am</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-2xl">📍</span>
                     <div>
-                      <p className="text-sm text-gray-600 mb-1">Location:</p>
-                      <p className="text-gray-700">
+                      <p className="text-sm text-white/80 mb-1">Location:</p>
+                      <p className="text-white/90">
                         320 8th St<br />
                         New Westminster, BC V3M 3R4<br />
-                        <span className="text-sm text-gray-600 italic">(Freedom Church building)</span>
+                        <span className="text-sm text-white/80 italic">(Freedom Church building)</span>
                       </p>
                     </div>
                   </div>
@@ -119,24 +121,26 @@ export default function Connect() {
             {/* Kids Ministry and Fellowship Time - Side by side on larger screens */}
             <div className="grid md:grid-cols-2 gap-8">
               {/* Kids Ministry */}
-              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
-                <h4 className="text-xl text-secondary mb-4">Kids Ministry</h4>
-                <p className="text-gray-700 leading-relaxed">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-sm p-8 md:p-12">
+                <h4 className="text-xl text-white mb-4">Kids Ministry</h4>
+                <p className="text-white/90 leading-relaxed">
                   We&apos;re glad to welcome families. A kids ministry is available during the service, providing a safe and caring environment where children can learn about God in age-appropriate and engaging ways. Our volunteers are committed to helping kids grow in faith while parents are able to participate fully in the worship service.
                 </p>
               </div>
 
               {/* Fellowship Time */}
-              <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
-                <h4 className="text-xl text-secondary mb-4">Fellowship Time</h4>
-                <p className="text-gray-700 leading-relaxed">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-sm p-8 md:p-12">
+                <h4 className="text-xl text-white mb-4">Fellowship Time</h4>
+                <p className="text-white/90 leading-relaxed">
                   Church doesn&apos;t end when the service ends. After worship, we invite you to stay for fellowship time, where you can connect with others, enjoy conversation, and build meaningful relationships. It&apos;s a relaxed and welcoming time to get to know our church community.
                 </p>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
+      <div className="container mx-auto px-4 py-16 space-y-16">
         {/* Join a Ministry Section */}
         <section className="max-w-6xl mx-auto">
           <h3 className="text-2xl text-secondary mb-8">Join a Ministry</h3>
@@ -153,7 +157,7 @@ export default function Connect() {
               </p>
               <button 
                 onClick={() => setShowContactForm(true)}
-                className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors"
+                className="bg-secondary text-white px-6 py-2 rounded-full text-sm border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors"
               >
                 I&apos;m interested
               </button>
@@ -165,7 +169,7 @@ export default function Connect() {
               </p>
               <button 
                 onClick={() => setShowContactForm(true)}
-                className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors"
+                className="bg-secondary text-white px-6 py-2 rounded-full text-sm border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors"
               >
                 I&apos;m interested
               </button>
@@ -177,7 +181,7 @@ export default function Connect() {
               </p>
               <button 
                 onClick={() => setShowContactForm(true)}
-                className="bg-secondary text-white px-6 py-2 rounded-full text-sm hover:bg-secondary/90 transition-colors"
+                className="bg-secondary text-white px-6 py-2 rounded-full text-sm border-2 border-secondary hover:bg-transparent hover:text-secondary transition-colors"
               >
                 I&apos;m interested
               </button>
