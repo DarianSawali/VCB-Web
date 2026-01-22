@@ -44,7 +44,7 @@ export default function Hero() {
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-secondary/10 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-secondary/20 z-10"></div>
             <Image
               src={image}
               alt="Hero image"
@@ -60,7 +60,7 @@ export default function Hero() {
       <div className="relative h-full flex items-center justify-center">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-accent text-center drop-shadow-lg">
-            ARISE & BUILD
+            The Year of Transformation
           </h1>
         </div>
       </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Navbar() {
@@ -16,11 +17,19 @@ export default function Navbar() {
         }`}>
           <div className="px-5 md:px-8">
             <div className="flex justify-between items-center h-16">
-              <Link href="/" className={`text-xl md:text-2xl transition-colors ${
+              <Link href="/" className={`flex items-center gap-3 transition-colors ${
                 isOpen ? 'text-secondary' : 'text-accent'
               }`}>
-                <span className="hidden sm:inline">Vancouver City Blessing</span>
-                <span className="sm:hidden">VCB</span>
+                <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0">
+                  <Image
+                    src="/images/logo.png"
+                    alt="City Blessing Church Logo"
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+                <span className="hidden sm:inline text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>City Blessing Church</span>
               </Link>
               
               {/* Desktop Menu */}

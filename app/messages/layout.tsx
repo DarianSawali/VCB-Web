@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Messages - Vancouver City Blessing',
-  description: 'Watch past services and sermons from Vancouver City Blessing',
+  title: 'Messages - City Blessing Church',
+  description: 'Watch past services and sermons from City Blessing Church',
 }
 
 export default function MessagesLayout({

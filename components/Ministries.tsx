@@ -50,7 +50,7 @@ export default function Ministries() {
                 </div>
 
                 <p className="text-gray-700 leading-relaxed">
-                  Whether you&apos;re visiting for the first time or looking for a church to call home, we&apos;d love to welcome you.
+                  Whether you&apos;re visiting for the first time or looking for a church to call home, we&apos;d love to see you.
                 </p>
               </div>
                     <Link

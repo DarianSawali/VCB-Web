@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Compassion Ministries - Vancouver City Blessing',
-  description: 'Compassion Ministries at Vancouver City Blessing',
+  title: 'Compassion Ministries - City Blessing Church',
+  description: 'Compassion Ministries at City Blessing Church',
 }
 
 export default function CompassionLayout({

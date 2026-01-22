@@ -11,7 +11,7 @@ export default function Connect() {
     <div className="bg-background min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden -mt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-secondary/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 to-secondary/40" />
         <div
           className="absolute inset-0 bg-cover opacity-60"
           style={{
@@ -34,7 +34,7 @@ export default function Connect() {
         <section className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl text-secondary mb-8">You Belong Here</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            At Vancouver City Blessing, we believe church is more than a weekly service
+            At City Blessing Church, we believe church is more than a weekly service
             - it is a family. There are many ways to get connected, build relationships,
             and grow in your walk with Jesus.
           </p>
@@ -83,7 +83,7 @@ export default function Connect() {
               <h3 className="text-2xl text-white mb-6">Join us</h3>
               <div className="space-y-4 mb-6">
                 <p className="text-white/90 leading-relaxed">
-                  We&apos;d love to welcome you to City Blessing Church. Whether you&apos;re exploring faith, new to the area, or looking for a church community, you are warmly invited to join us.
+                  We&apos;d love to see you at City Blessing Church. Whether you&apos;re exploring faith, new to the area, or looking for a church community, you are warmly invited to join us.
                 </p>
                 <p className="text-white/90 leading-relaxed">
                   Our gatherings are centred on worship, biblical teaching, and genuine community.
@@ -244,7 +244,7 @@ export default function Connect() {
         {/* <section className="max-w-6xl mx-auto mb-4">
           <h3 className="text-2xl text-secondary mb-8">Gallery</h3>
           <p className="text-gray-700 leading-relaxed mb-4 max-w-3xl">
-            A glimpse of what God is doing in and through Vancouver City Blessing.
+            A glimpse of what God is doing in and through City Blessing Church.
           </p>
         </section> */}
       </div>

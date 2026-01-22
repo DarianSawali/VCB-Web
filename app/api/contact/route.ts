@@ -56,7 +56,7 @@ export async function POST(request: Request) {
           <p><strong>Message:</strong></p>
           <p style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; white-space: pre-wrap;">${message}</p>
           <p style="color: #666; font-size: 12px; margin-top: 20px;">
-            This contact form submission was received through the Vancouver City Blessing website.
+            This contact form submission was received through the City Blessing Church website.
           </p>
         </div>
       `,

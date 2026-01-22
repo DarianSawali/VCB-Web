@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Give - Vancouver City Blessing',
-  description: 'Give to Vancouver City Blessing',
+  title: 'Give - City Blessing Church',
+  description: 'Give to City Blessing Church',
 }
 
 export default function Give() {
@@ -35,10 +35,10 @@ export default function Give() {
                   <p className="text-lg font-semibold text-secondary">Vancouver City Blessing</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-2">Address:</p>
+                  <p className="text-sm text-gray-600 mb-2">Mailing Address:</p>
                   <p className="text-gray-700 leading-relaxed">
-                    P.O. Box 31094 RPO Thunderbird,<br />
-                    Langley BC, V1M 0A9
+                    31094 RPO Thunderbird,<br />
+                    Langley, BC V3M 3R4
                   </p>
                 </div>
               </div>

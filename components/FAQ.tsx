@@ -13,7 +13,7 @@ export default function FAQ() {
   const faqs: FAQItem[] = [
     {
       question: 'When and where are your services?',
-      answer: 'We gather for worship every Saturday at 10:45am at 320 8th St, New Westminster, BC V3M 3R4 (Freedom Church building). We would love to welcome you!',
+      answer: 'We gather for worship every Saturday at 10:45am at 320 8th St, New Westminster, BC V3M 3R4 (Freedom Church building). We would love to see you!',
     },
     {
       question: 'Do you have programs for children?',

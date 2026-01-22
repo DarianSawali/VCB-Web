@@ -42,7 +42,7 @@ export async function POST(request: Request) {
           <p><strong>Prayer Request:</strong></p>
           <p style="background-color: #f5f5f5; padding: 15px; border-radius: 5px; white-space: pre-wrap;">${prayerRequest}</p>
           <p style="color: #666; font-size: 12px; margin-top: 20px;">
-            This prayer request was submitted through the Vancouver City Blessing website.
+            This prayer request was submitted through the City Blessing Church website.
           </p>
         </div>
       `,

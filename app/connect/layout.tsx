@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Connect - Vancouver City Blessing',
-  description: 'Connect with Vancouver City Blessing church family',
+  title: 'Connect - City Blessing Church',
+  description: 'Connect with City Blessing Church family',
 }
 
 export default function ConnectLayout({

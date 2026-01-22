@@ -10,11 +10,11 @@ export default function Introduction() {
             {/* Left Side - Text Content */}
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-6">
-                Vancouver City Blessing
+                City Blessing Church
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  Vancouver City Blessing Church is a Christ-centred community committed to knowing God, growing in faith, and sharing His love with our city. Whether you are new to church, exploring faith, or looking for a place to belong, you are welcome here.
+                  City Blessing Church is a Christ-centred community committed to knowing God, growing in faith, and sharing His love with our city. Whether you are new to church, exploring faith, or looking for a place to belong, we would love to have you.
                 </p>
                 <p>
                   We invite you to join us as we worship together, build meaningful relationships, and live out God&apos;s calling in our daily lives.
@@ -36,7 +36,7 @@ export default function Introduction() {
               <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20 z-10 opacity-60 rounded-xl"></div>
               <Image
                 src="/images/hero/welcome.JPG"
-                alt="Welcome to Vancouver City Blessing"
+                alt="Welcome to City Blessing Church"
                 width={0}
                 height={0}
                 sizes="100vw"

@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Left - Logo and Contact */}
           <div>
-            <h3 className="text-2xl font-bold mb-4 text-accent">Vancouver City Blessing</h3>
+            <h3 className="text-2xl font-bold mb-4 text-accent">City Blessing Church</h3>
             <div className="space-y-2 text-sm text-white/80">
               <p>320 8th St, New Westminster, BC V3M 3R4</p>
             </div>
@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="border-t border-white/20 pt-8">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4">
             <p className="text-sm text-white/80">
-              &copy; {new Date().getFullYear()} Vancouver City Blessing. All rights reserved.
+              &copy; {new Date().getFullYear()} City Blessing Church. All rights reserved.
             </p>
           </div>
         </div>

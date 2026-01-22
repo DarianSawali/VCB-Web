@@ -4,8 +4,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Vancouver City Blessing - Welcome',
-  description: 'Welcome to Vancouver City Blessing church community',
+  title: 'City Blessing Church - Welcome',
+  description: 'Welcome to City Blessing Church community',
 }
 
 export default function RootLayout({
