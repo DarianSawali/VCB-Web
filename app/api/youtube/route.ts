@@ -1,5 +1,8 @@
 import { NextResponse } from 'next/server'
 
+// Live status changes in real time — disable caching so we always get fresh data
+export const dynamic = 'force-dynamic'
+
 interface YouTubeVideo {
   videoId: string
   title: string
@@ -31,13 +34,13 @@ export async function GET() {
     // If no channel ID is provided, get it from the handle
     if (!actualChannelId) {
       const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${channelHandle}&key=${apiKey}`
-      const channelRes = await fetch(channelUrl)
+      const channelRes = await fetch(channelUrl, { cache: 'no-store' })
       const channelData = await channelRes.json()
 
       if (!channelData.items || channelData.items.length === 0) {
         // Fallback: try with forUsername (older method)
         const channelUrlAlt = `https://www.googleapis.com/youtube/v3/channels?part=id&forUsername=${channelHandle}&key=${apiKey}`
-        const channelResAlt = await fetch(channelUrlAlt)
+        const channelResAlt = await fetch(channelUrlAlt, { cache: 'no-store' })
         const channelDataAlt = await channelResAlt.json()
 
         if (channelDataAlt.items && channelDataAlt.items.length > 0) {
@@ -60,7 +63,7 @@ export async function GET() {
 
     // First, check for active live streams
     const liveStreamUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${actualChannelId}&type=video&eventType=live&maxResults=1&key=${apiKey}`
-    const liveStreamRes = await fetch(liveStreamUrl)
+    const liveStreamRes = await fetch(liveStreamUrl, { cache: 'no-store' })
     const liveStreamData = await liveStreamRes.json()
 
     if (liveStreamData.items && liveStreamData.items.length > 0) {
@@ -76,7 +79,7 @@ export async function GET() {
 
     // Get the channel's uploads playlist ID (more reliable for recent videos)
     const channelInfoUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${actualChannelId}&key=${apiKey}`
-    const channelInfoRes = await fetch(channelInfoUrl)
+    const channelInfoRes = await fetch(channelInfoUrl, { cache: 'no-store' })
     const channelInfoData = await channelInfoRes.json()
 
     if (channelInfoData.items && channelInfoData.items.length > 0) {
@@ -84,7 +87,7 @@ export async function GET() {
 
       // Fetch recent videos from the uploads playlist
       const videosUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${uploadsPlaylistId}&maxResults=4&key=${apiKey}`
-      const videosRes = await fetch(videosUrl)
+      const videosRes = await fetch(videosUrl, { cache: 'no-store' })
       const videosData = await videosRes.json()
 
       if (videosData.items && videosData.items.length > 0) {
@@ -106,7 +109,7 @@ export async function GET() {
     } else {
       // Fallback to search method if playlist method fails
       const videosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${actualChannelId}&type=video&order=date&maxResults=4&key=${apiKey}`
-      const videosRes = await fetch(videosUrl)
+      const videosRes = await fetch(videosUrl, { cache: 'no-store' })
       const videosData = await videosRes.json()
 
       if (videosData.items && videosData.items.length > 0) {
@@ -126,7 +129,9 @@ export async function GET() {
       }
     }
 
-    return NextResponse.json(response)
+    return NextResponse.json(response, {
+      headers: { 'Cache-Control': 'no-store, max-age=0' },
+    })
   } catch (error) {
     console.error('YouTube API Error:', error)
     return NextResponse.json(
