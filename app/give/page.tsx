@@ -37,8 +37,8 @@ export default function Give() {
                 <div>
                   <p className="text-sm text-gray-600 mb-2">Mailing Address:</p>
                   <p className="text-gray-700 leading-relaxed">
-                    31094 RPO Thunderbird,<br />
-                    Langley, BC V3M 3R4
+                    PO Box 31094 RPO Thunderbird,<br />
+                    Langley, BC V1M 0A9
                   </p>
                 </div>
               </div>
