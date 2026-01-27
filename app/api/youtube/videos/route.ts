@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+export const dynamic = 'force-dynamic'
+
 interface YouTubeVideo {
   videoId: string
   title: string
@@ -29,12 +31,12 @@ export async function GET(request: NextRequest) {
     // If no channel ID is provided, get it from the handle
     if (!actualChannelId) {
       const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=id&forHandle=${channelHandle}&key=${apiKey}`
-      const channelRes = await fetch(channelUrl)
+      const channelRes = await fetch(channelUrl,{ cache: 'no-store' })
       const channelData = await channelRes.json()
 
       if (!channelData.items || channelData.items.length === 0) {
         const channelUrlAlt = `https://www.googleapis.com/youtube/v3/channels?part=id&forUsername=${channelHandle}&key=${apiKey}`
-        const channelResAlt = await fetch(channelUrlAlt)
+        const channelResAlt = await fetch(channelUrlAlt, { cache: 'no-store' })
         const channelDataAlt = await channelResAlt.json()
 
         if (channelDataAlt.items && channelDataAlt.items.length > 0) {
@@ -52,7 +54,7 @@ export async function GET(request: NextRequest) {
 
     // Get the channel's uploads playlist ID
     const channelInfoUrl = `https://www.googleapis.com/youtube/v3/channels?part=contentDetails&id=${actualChannelId}&key=${apiKey}`
-    const channelInfoRes = await fetch(channelInfoUrl)
+    const channelInfoRes = await fetch(channelInfoUrl, { cache: 'no-store' })
     const channelInfoData = await channelInfoRes.json()
 
     if (!channelInfoData.items || channelInfoData.items.length === 0) {
@@ -74,7 +76,7 @@ export async function GET(request: NextRequest) {
       videosUrl.searchParams.set('pageToken', pageToken)
     }
 
-    const videosRes = await fetch(videosUrl.toString())
+    const videosRes = await fetch(videosUrl.toString(), { cache: 'no-store' })
     const videosData = await videosRes.json()
 
     if (!videosData.items || videosData.items.length === 0) {
@@ -97,6 +99,8 @@ export async function GET(request: NextRequest) {
       videos,
       nextPageToken: videosData.nextPageToken || null,
       totalResults: videosData.pageInfo?.totalResults || videos.length,
+    }, {
+      headers: { 'Cache-Control': 'no-store, max-age=0' },
     })
   } catch (error) {
     console.error('YouTube API Error:', error)
