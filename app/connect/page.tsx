@@ -11,18 +11,20 @@ export default function Connect() {
     <div className="bg-background min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden -mt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/60 to-secondary/40" />
-        <div
-          className="absolute inset-0 bg-cover opacity-60"
-          style={{
-            backgroundImage:
-              "url('/images/connect/connect-hero.JPG')",
-            backgroundPosition: 'center 72%',
-          }}
-        />
-        <div className="relative h-full flex items-center justify-center">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover"
+            style={{
+              backgroundImage:
+                "url('/images/connect/connect-hero.JPG')",
+              backgroundPosition: 'center 72%',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/40 z-10" />
+        </div>
+        <div className="relative z-30 h-full flex items-center justify-center">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-semibold text-accent text-center drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-semibold text-accent text-center">
               Connect
             </h1>
           </div>

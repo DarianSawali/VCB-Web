@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function Hero() {
   const images = [
-    '/images/hero/hero-image.jpg',
+    '/images/hero/hero.jpeg',
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -44,7 +44,7 @@ export default function Hero() {
               index === currentIndex ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-secondary/20 z-10"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/30 z-10"></div>
             <Image
               src={image}
               alt="Hero image"
@@ -57,9 +57,9 @@ export default function Hero() {
       </div>
       
       {/* Overlay Content */}
-      <div className="relative h-full flex items-center justify-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-accent text-center drop-shadow-lg">
+      <div className="relative z-30 h-full flex items-center justify-center">
+        <div className="container mx-auto px-4 relative">
+          <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-bold text-accent text-center">
             The Year of Transformation
           </h1>
         </div>

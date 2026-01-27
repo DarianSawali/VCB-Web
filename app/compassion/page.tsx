@@ -9,18 +9,20 @@ export default function Compassion() {
     <div className="bg-background min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden -mt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-secondary/80 to-secondary/60" />
-        <div
-          className="absolute inset-0 bg-cover opacity-60"
-          style={{
-            backgroundImage:
-              "url('/images/compassion/nightshift.JPG')",
-            backgroundPosition: 'center 40%',
-          }}
-        />
-        <div className="relative h-full flex items-center justify-center">
+        <div className="absolute inset-0">
+          <div
+            className="absolute inset-0 bg-cover"
+            style={{
+              backgroundImage:
+                "url('/images/compassion/nightshift.JPG')",
+              backgroundPosition: 'center 40%',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-black/30 z-10" />
+        </div>
+        <div className="relative z-30 h-full flex items-center justify-center">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl md:text-6xl font-semibold text-accent text-center drop-shadow-lg">
+            <h1 className="text-4xl md:text-6xl font-semibold text-accent text-center">
               Compassion Ministries
             </h1>
           </div>
