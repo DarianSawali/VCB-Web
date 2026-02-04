@@ -1,0 +1,21 @@
+import type { MetadataRoute } from 'next'
+
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cityblessingchurch.com'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const routes = [
+    '',
+    '/about',
+    '/connect',
+    '/compassion',
+    '/give',
+    '/messages',
+  ]
+
+  return routes.map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(),
+    changeFrequency: path === '' ? 'weekly' : ('monthly' as const),
+    priority: path === '' ? 1 : 0.8,
+  }))
+}
