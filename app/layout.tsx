@@ -8,6 +8,10 @@ const googleVerification = process.env.GOOGLE_SITE_VERIFICATION
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  icons: {
+    icon: '/images/logo.png',
+    apple: '/images/logo.png',
+  },
   ...(googleVerification && {
     verification: { google: googleVerification },
   }),
