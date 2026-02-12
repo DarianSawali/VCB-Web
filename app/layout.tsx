@@ -3,10 +3,14 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cityblessingchurch.com'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vancouvercbc.org'
+const googleVerification = process.env.GOOGLE_SITE_VERIFICATION
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  ...(googleVerification && {
+    verification: { google: googleVerification },
+  }),
   title: {
     default: 'City Blessing Church | Vancouver & New Westminster',
     template: '%s | City Blessing Church',

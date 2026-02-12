@@ -6,6 +6,7 @@ export default function PrayerForm() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [request, setRequest] = useState('')
+  const [website, setWebsite] = useState('') // honeypot: leave empty
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
@@ -34,6 +35,7 @@ export default function PrayerForm() {
           name: name.trim() || undefined,
           email: email.trim() || undefined,
           request: request.trim(),
+          website: website.trim(), // honeypot
         }),
       })
 
@@ -66,6 +68,18 @@ export default function PrayerForm() {
     <div className="bg-white rounded-xl shadow-sm p-8 md:p-12">
       <h4 className="text-lg text-secondary mb-4">Prayer Request</h4>
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Honeypot: hidden from users, bots fill it */}
+        <div className="absolute -left-[9999px] w-1 h-1 overflow-hidden" aria-hidden="true">
+          <label htmlFor="prayer-website">Website</label>
+          <input
+            id="prayer-website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </div>
         <div>
           <label className="block text-sm text-gray-700 mb-1" htmlFor="name">
             Name (optional)

@@ -10,6 +10,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [website, setWebsite] = useState('') // honeypot: leave empty
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
@@ -46,6 +47,7 @@ export default function ContactForm({ onClose }: ContactFormProps) {
           name: name.trim(),
           email: email.trim(),
           message: message.trim(),
+          website: website.trim(), // honeypot
         }),
       })
 
@@ -94,6 +96,18 @@ export default function ContactForm({ onClose }: ContactFormProps) {
         )}
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Honeypot: hidden from users, bots fill it */}
+        <div className="absolute -left-[9999px] w-1 h-1 overflow-hidden" aria-hidden="true">
+          <label htmlFor="contact-website">Website</label>
+          <input
+            id="contact-website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
+          />
+        </div>
         <div>
           <label className="block text-sm text-gray-700 mb-1" htmlFor="contact-name">
             Name <span className="text-red-500">*</span>

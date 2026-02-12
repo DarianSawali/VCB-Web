@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://cityblessingchurch.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.vancouvercbc.org'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

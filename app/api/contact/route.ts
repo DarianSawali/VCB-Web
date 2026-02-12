@@ -1,10 +1,25 @@
 import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { checkRateLimit } from '@/lib/rate-limit'
 
 export async function POST(request: Request) {
   try {
+    // Spam: rate limit by IP
+    const rate = checkRateLimit(request)
+    if (!rate.ok) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429, headers: rate.retryAfter ? { 'Retry-After': String(rate.retryAfter) } : undefined }
+      )
+    }
+
     const body = await request.json()
-    const { name, email, message } = body
+    const { name, email, message, website: honeypot } = body
+
+    // Spam: honeypot (hidden field; bots fill it)
+    if (honeypot && String(honeypot).trim()) {
+      return NextResponse.json({ success: true, message: 'Contact form submitted successfully' })
+    }
 
     // Validate required fields
     if (!name || name.trim().length === 0) {
@@ -28,12 +43,12 @@ export async function POST(request: Request) {
       )
     }
 
-    // Get environment variables
+    // Get environment variables (no fallbacks)
     const apiKey = process.env.RESEND_API_KEY
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || process.env.PRAYER_RECIPIENT_EMAIL || 'contact@vancouvercityblessing.com'
-    const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
+    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL
+    const fromEmail = process.env.RESEND_FROM_EMAIL
 
-    if (!apiKey) {
+    if (!apiKey || !recipientEmail || !fromEmail) {
       return NextResponse.json(
         { error: 'Email service is not configured' },
         { status: 500 }
@@ -47,6 +62,7 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: recipientEmail,
+      replyTo: email,
       subject: 'New Contact Form Submission - Carecell Inquiry',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
